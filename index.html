@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <section class="py-5 header">
+            <div class="container py-4">
+                <header class="text-center mb-5 pb-5">
+                    <h1>Cybersoft - Bootcam - 28</h1>
+                    <h3>Hồ Viết Dũng</h3>
+                </header>
+
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <!-- Tabs nav -->
+                        <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <a class="nav-link mb-3 p-3 shadow active" id="v-pills-home-tab" data-toggle="pill"
+                                href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                <i class="fa fa-user-circle-o mr-2"></i>
+                                <span class="font-weight-bold small text-uppercase">Bài 1</span></a>
+
+                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-profile-tab" data-toggle="pill"
+                                href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                aria-selected="false">
+                                <i class="fa fa-calendar-minus-o mr-2"></i>
+                                <span class="font-weight-bold small text-uppercase">Bài 2</span></a>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-9">
+                        <!-- Tabs content -->
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade shadow rounded bg-white show active p-5" id="v-pills-home"
+                                role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <h4>Xét điểm tốt nghiệp</h4>
+                                <h5>Điểm cộng ưu tiên</h5>
+                                <table border="1" class="diemUuTien">
+                                    <tr>
+                                        <td colspan="3">Khu Vực</td>
+                                        <td colspan="3">Đối Tượng</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A</td>
+                                        <td>B</td>
+                                        <td>C</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>0.5</td>
+                                        <td>2.5</td>
+                                        <td>1.5</td>
+                                        <td>1</td>
+                                    </tr>
+
+                                </table>
+                                <div class="form-group">
+                                    <p>Nhập điểm chuẩn</p>
+                                    <input type="number" id="diemChuan" class="form-control">
+                                    <p>Nhập điểm môn thứ nhất</p>
+                                    <input type="number" id="diem1" class="form-control">
+                                    <p>Nhập điểm môn thứ hai</p>
+                                    <input type="number" id="diem2" class="form-control">
+                                    <p>Nhập điểm môn thứ ba</p>
+                                    <input type="number" id="diem3" class="form-control">
+                                    <p>Nhập khu vực của bạn</p>
+                                    <select id="khuVuc" name="khu-vuc" selected="0" class="lua-chon">
+                                        <option value="0">Hãy chọn khu vực</option>
+                                        <option value="2">A</option>
+                                        <option value="1">B</option>
+                                        <option value="0.5">C</option>
+                                    </select>
+                                    <p>Nhập đối tượng</p>
+                                    <select id="doiTuong" name="doi-tuong" selected="0" class="lua-chon">
+                                        <option value="0">Hãy chọn đối tượng</option>
+                                        <option value="2.5">1</option>
+                                        <option value="1.5">2</option>
+                                        <option value="1">3</option>
+                                    </select>
+                                    <button id="in-diem" class="mt-2 btn btn-danger">In kết quả</button>
+                                </div>
+                                <div id="domKetQua" class="bg-success"></div>
+                            </div>
+
+                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-profile" role="tabpanel"
+                                aria-labelledby="v-pills-profile-tab">
+                                <h4 class="mb-4">Tính tiền điện</h4>
+                                <!-- <p>Nhập tên</p>
+                                <input type="text" id="name" class="form-control"> -->
+                                <p>Nhập số Kw đã dùng</p>
+                                <input type="number" id="kw" class="form-control">
+                                <button id="in-thong-tin" class="mt-2 btn btn-danger">In kết quả</button>
+                                <br>
+                                <div id="domKetQua-b2" class="bg-success"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+
+
+</body>
+
+</html>
